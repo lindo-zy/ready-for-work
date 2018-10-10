@@ -11,5 +11,6 @@ class A:
 a = A()
 
 # print(a.__x)  #报错
+print(a._A__x)  # 3
 print(a._y)  # 4
 print(a.z)  # 5
