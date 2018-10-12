@@ -1,14 +1,18 @@
 #!/usr/bin/python3
 # -*- coding:utf-8 -*-
-from itertools import islice
+#
+# fib = lambda n: n if n <= 2 else fib(n - 1) + fib(n - 2)
 
 
-def fib():
+def fib(n):
     a, b = 0, 1
-    while True:
-        yield a
+    for i in range(n):
         a, b = b, a + b
+        print(b)
+    # return b
 
 
-if __name__ == '__main__':
-    print(list(islice(fib(), 5)))
+# 一只青蛙一次可以跳上1级台阶，也可以跳上2级……它也可以跳上n级。
+# 求该青蛙跳上一个n级的台阶总共有多少种跳法。
+
+fib = lambda n: n if n < 2 else 2 * fib(n - 1)
